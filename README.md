@@ -18,46 +18,54 @@ This repository is intended to track and manage the weekly assignments and proje
 ## Weekly Assignments
 
 ### Week 1: Introduction to Programming Concepts
-- **Assignment:** Basic Python syntax and data types
+- **Assignment:** Calculator
 - **Files:**
   - `Cline_Jason_SolutionW1.py` - Python script for the week's assignment
-  - `Cline_Jason_SolutionW1.pdf` - PDF report summarizing the results and findings
+  - `Cline_Jason_SolutionW1.pdf` - PDF of pseudocode
+  - `Cline_Jason_SolutionW1.png` - Image of program execution
 
 ### Week 2: Variables and Expressions
-- **Assignment:** Basic Python syntax and data types
+- **Assignment:** N/A
 - **Files:**
   - `Cline_Jason_SolutionW2.py` - Python script for the week's assignment
-  - `Cline_Jason_SolutionW2.pdf` - PDF report summarizing the results and findings
+  - `Cline_Jason_SolutionW2.pdf` -  PDF of pseudocode
+  - `Cline_Jason_SolutionW2.png` - Image of program execution
 ### Week 3: Data Types and Arrays
-- **Assignment:** Basic Python syntax and data types
+- **Assignment:** N/A
 - **Files:**
   - `Cline_Jason_SolutionW3.py` - Python script for the week's assignment
-  - `Cline_Jason_SolutionW3.pdf` - PDF report summarizing the results and findings
+  - `Cline_Jason_SolutionW3.pdf` -  PDF of pseudocode
+  - `Cline_Jason_SolutionW3.png` - Image of program execution
 ### Week 4: Loops
-- **Assignment:** Basic Python syntax and data types
+- **Assignment:** N/A
 - **Files:**
   - `Cline_Jason_SolutionW4.py` - Python script for the week's assignment
-  - `Cline_Jason_SolutionW4.pdf` - PDF report summarizing the results and findings
+  - `Cline_Jason_SolutionW4.pdf` -  PDF of pseudocode
+  - `Cline_Jason_SolutionW4.png` - Image of program execution
  ### Week 5: Branching
-- **Assignment:** Basic Python syntax and data types
+- **Assignment:** N/A
 - **Files:**
   - `Cline_Jason_SolutionW5.py` - Python script for the week's assignment
-  - `Cline_Jason_SolutionW5.pdf` - PDF report summarizing the results and findings
+  - `Cline_Jason_SolutionW5.pdf` -  PDF of pseudocode
+  - `Cline_Jason_SolutionW5.png` - Image of program execution
 ### Week 6: Lists and Dictionaries
-- **Assignment:** Basic Python syntax and data types
+- **Assignment:** N/A
 - **Files:**
   - `Cline_Jason_SolutionW6.py` - Python script for the week's assignment
-  - `Cline_Jason_SolutionW6.pdf` - PDF report summarizing the results and findings
+  - `Cline_Jason_SolutionW6.pdf` -  PDF of pseudocode
+  - `Cline_Jason_SolutionW6.png` - Image of program execution
 ### Week 7: User-Defined Functions and Exceptions
-- **Assignment:** Basic Python syntax and data types
+- **Assignment:** N/A
 - **Files:**
   - `Cline_Jason_SolutionW7.py` - Python script for the week's assignment
-  - `Cline_Jason_SolutionW7.pdf` - PDF report summarizing the results and findings
+  - `Cline_Jason_SolutionW7.pdf` -  PDF of pseudocode
+  - `Cline_Jason_SolutionW7.png` - Image of program execution
 ### Week 8: Classes and String Manipulation
-- **Assignment:** Basic Python syntax and data types
+- **Assignment:** N/A
 - **Files:**
   - `Cline_Jason_SolutionW8.py` - Python script for the week's assignment
-  - `Cline_Jason_SolutionW8.pdf` - PDF report summarizing the results and findings
+  - `Cline_Jason_SolutionW8.pdf` -  PDF of pseudocode
+  - `Cline_Jason_SolutionW8.png` - Image of program execution
  
 ## Folder Structure
 
@@ -65,37 +73,37 @@ The repository is organized as follows:
 
 ```
 ├── week1
-│   ├── week1_pseudocode.pdf
-│   └── week1_solution.py
-|   └── week1_screenshot.png
+│   ├── Cline_Jason_SolutionW1.py
+│   └── Cline_Jason_SolutionW1.pdf
+|   └── Cline_Jason_SolutionW1.png
 ├── week2
-│   ├── week2_pseudocode.pdf
-│   └── week2_solution.py
-|   └── week2_screenshot.png
+│   ├── Cline_Jason_SolutionW2.py
+│   └── Cline_Jason_SolutionW2.pdf
+|   └── Cline_Jason_SolutionW2.png
 ├── week3
-│   ├── week3_pseudocode.pdf
-│   └── week3_solution.py
-|   └── week3_screenshot.png
+│   ├── Cline_Jason_SolutionW3.py
+│   └── Cline_Jason_SolutionW3.pdf
+|   └── Cline_Jason_SolutionW3.png
 ├── week4
-│   ├── week4_pseudocode.pdf
-│   └── week4_solution.py
-|   └── week4_screenshot.png
+│   ├── Cline_Jason_SolutionW4.py
+│   └── Cline_Jason_SolutionW4.pdf
+|   └── Cline_Jason_SolutionW4.png
 ├── week5
-│   ├── week5_pseudocode.pdf
-│   └── week5_solution.py
-|   └── week5_screenshot.png
+│   ├── Cline_Jason_SolutionW5.py
+│   └── Cline_Jason_SolutionW5.pdf
+|   └── Cline_Jason_SolutionW5.png
 ├── week6
-│   ├── week6_pseudocode.pdf
-│   └── week6_solution.py
-|   └── week6_screenshot.png
+│   ├── Cline_Jason_SolutionW6.py
+│   └── Cline_Jason_SolutionW6.pdf
+|   └── Cline_Jason_SolutionW6.png
 ├── week7
-│   ├── week7_pseudocode.pdf
-│   └── week7_solution.py
-|   └── week7_screenshot.png
+│   ├── Cline_Jason_SolutionW7.py
+│   └── Cline_Jason_SolutionW7.pdf
+|   └── Cline_Jason_SolutionW7.png
 ├── week8
-│   ├── week8_pseudocode.pdf
-│   └── week8_solution.py
-|   └── week8_screenshot.png
+│   ├── Cline_Jason_SolutionW8.py
+│   └── Cline_Jason_SolutionW8.pdf
+|   └── Cline_Jason_SolutionW8.png
 └── README.md
 ```
 
