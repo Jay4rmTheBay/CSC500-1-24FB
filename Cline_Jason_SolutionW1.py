@@ -109,7 +109,6 @@ def divide_numbers(num1: float, num2: float) -> float | None:
         return num1 / num2
     except ZeroDivisionError as error:
         print(f"Error: {error}")
-        # return None
 
 
 def main() -> None:
