@@ -9,18 +9,21 @@ Term: 24FB
 Module: 1
 
 Date Created: 08/18/2024
-Last Modified: 08/20/2024
+Last Modified: 08/18/2024
 
 Description: 
     This program gets two floats from the user and then
     adds, subtracts, multiply, and divides the two numbers.
-    The results are then printed for the user. (OOP VERSION)
+    The results are then printed for the user.
 
 """
 
 
 class Calculator:
     def __init__(self):
+        """
+        Initializes the num1 and num2 variables to None.
+        """
         self.num1 = None
         self.num2 = None
 
