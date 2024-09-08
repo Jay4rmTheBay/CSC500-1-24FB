@@ -1,3 +1,15 @@
+# File Name: Cline_Jason_PortfolioMilestoneW4UPDATE.py
+
+# Author: Jason Todd Cline
+
+# Institution: Colorado State University Global
+# Class: CSC500-1
+# Term: 24FB
+# Module: 4
+
+
+# Date Created: 09/08/2024
+# Last Modified: 09/08/2024
 class ItemToPurchase:
     def __init__(
         self,
