@@ -1,3 +1,16 @@
+# File Name: Cline_Jason_RestaurantBill_AlarmClockW3.py
+
+# Author: Jason Todd Cline
+
+# Institution: Colorado State University Global
+# Class: CSC500-1
+# Term: 24FB
+# Module: 3
+
+# Date Created: 09/08/2024
+# Last Modified: 09/08/2024
+
+
 def get_user_input_meal() -> float:
     """
     Get user input for the charge of the food.
