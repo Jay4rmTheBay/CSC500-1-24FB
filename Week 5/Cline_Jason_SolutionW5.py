@@ -81,7 +81,7 @@ def bookstore() -> None:
     # Part 2: CSU Global Bookstore
     num_books = int(input("How many books have you purchased this month?: "))
     if num_books <= 1:
-        print(f"You have earned 0 points for purchasing at least 0 books.")
+        print(f"You have earned 0 points for purchasing less than 2 books.")
     elif num_books > 1 and num_books <= 3:
         print(f"You have earned 5 points for purchasing at least 2 books.")
     elif num_books > 3 and num_books <= 5:
