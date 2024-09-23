@@ -183,7 +183,8 @@ def main() -> None:
 
     print("\n")
 
-    # Hard-coded for assignment:
+    # Hard-coded for assignment as proof of concept without user input:
+    
     # Create items with hardcoded descriptions as placeholders
     item1 = ItemToPurchase("Nike Romaleos", 189.00, 2)
     item1.item['description'] = "Volt color, Weightlifting shoes"  # Placeholder description for now
@@ -200,35 +201,8 @@ def main() -> None:
     shopping_cart.add_item(item2)
     shopping_cart.add_item(item3)
 
-    # Print item descriptions
+    # Print item descriptions as proof of concept
     shopping_cart.print_descriptions()
-
-    # Test
-    # print("Running with no inputs...")
-    # cart = ShoppingCart("Jason", "September, 22, 2024")
-    # cart.print_total()
-    # print(cart.get_cost_of_cart())
-    # print(cart.get_num_items_in_cart())
-
-    # # Add item, check output, add another, check output, then remove, and check again
-    # print("Adding items to cart...")
-    # cart.add_item(ItemToPurchase("banana", 2, 3))
-    # cart.add_item(ItemToPurchase("Milk", 1, 5))
-    # print("Displaying names of items in cart...")
-    # for item in cart.cart_items:
-    #     print(item.item["name"])
-    # print("Current total of objects in cart...")
-    # cart.print_total()
-    # print("Current cost of cart...")
-    # print(cart.get_cost_of_cart())
-    # print("Current number of items in cart...")
-    # print(cart.get_num_items_in_cart())
-    # print("Removing an item from cart....")
-    # cart.remove_item("BANANAA")
-    # cart.remove_item("BaNANA")
-    # print("Display names of items in cart...")
-    # for item in cart.cart_items:
-    #     print(item.item["name"])
 
 
 if __name__ == "__main__":
