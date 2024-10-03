@@ -39,7 +39,7 @@ def initialize_variables():
 
 
 def fetch_input():
-    user_input = input()
+    user_input = input("Enter a course number:").upper()
     return user_input
 
 
