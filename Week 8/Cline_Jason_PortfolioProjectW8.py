@@ -76,7 +76,7 @@ class ShoppingCart:
                 print(f"{item_name} has been removed from the cart".center(WIDTH))
                 return
         else:
-            print("Item not found in cart. Nothing removed.")
+            print("Item not found in cart. Nothing removed.".center(WIDTH))
 
     def modify_item(item: ItemToPurchase) -> None:
         """
@@ -117,7 +117,6 @@ class ShoppingCart:
             for item in self.cart_items:
                 item.print_item_cost()
             print(f"Total: ${self.get_cost_of_cart():.2f}".center(WIDTH))
-            print()
         else:
             print(f"SHOPPING CART IS EMPTY".center(WIDTH))
 
@@ -163,6 +162,7 @@ def main() -> None:
             match user_input:
                 case "q":
                     print(f"{'Thanks for shopping with us. Goodbye!':^{WIDTH}}")
+                    print()
                     return
                 case "a":
                     print()
@@ -189,7 +189,7 @@ def main() -> None:
                     cart.modify_item(item_name)
                 case "i":
                     print()
-                    print(f"{'\nOUTPUT ITEMS\' DESCRIPTIONS':^{WIDTH}}")
+                    print(f"{'OUTPUT ITEMS\' DESCRIPTIONS':^{WIDTH}}")
                     cart.print_descriptions()
                 case "o":
                     print()
