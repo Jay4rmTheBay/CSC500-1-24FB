@@ -17,6 +17,7 @@ class ItemToPurchase:
     def __init__(
         self,
         item_name: str = "none",
+        item_description: str = "none",
         item_price: float = 0,
         item_quantity: int = 0,
     ) -> None:
@@ -30,6 +31,7 @@ class ItemToPurchase:
         """
         self.item = {
             "name": item_name,
+            "description": item_description,
             "price": item_price,
             "quantity": item_quantity,
         }
@@ -71,7 +73,7 @@ class ShoppingCart:
         for item in self.cart_items:
             if item.item["name"].lower() == item_name.lower():
                 self.cart_items.remove(item)
-                print(f"{item_name} has been removed from the cart")
+                print(f"{item_name} has been removed from the cart".center(WIDTH))
                 return
         else:
             print("Item not found in cart. Nothing removed.")
@@ -129,8 +131,7 @@ class ShoppingCart:
             )
             print(f"Item Descriptions".center(WIDTH))
             for item in self.cart_items:
-                description = item.item.get("description", "No description available")
-                print(f"{item.item['name']}: {description}".center(WIDTH))
+                print(f"{item.item['name']}: {item.item['description']}".center(WIDTH))
         else:
             print(f"{'SHOPPING CART IS EMPTY'}".center(WIDTH))
 
@@ -139,7 +140,13 @@ def main() -> None:
     """
     Main function to...
     """
-    cart: ShoppingCart = ShoppingCart("John Doe", "February 1, 2020")
+    print(f"{'Enter customer\'s name:':^{WIDTH}}")
+    customer_name: str = input(f"{'':^{WIDTH / 3}}")
+    print(f"{'Enter today\'s date:':^{WIDTH}}")
+    current_date: str = input(f"{'':^{WIDTH / 3}}")
+    print(f"{f'Customer\'s name: {customer_name}':^{WIDTH}}")
+    print(f"{f'Today\'s date: {current_date}':^{WIDTH}}")
+    cart: ShoppingCart = ShoppingCart(customer_name, current_date)
 
     def print_menu(cart: ShoppingCart):
         while True:
@@ -158,19 +165,31 @@ def main() -> None:
                     print(f"{'Thanks for shopping with us. Goodbye!':^{WIDTH}}")
                     return
                 case "a":
-                    item_name: str = input("Enter the item name: ")
-                    item_price: float = float(input("Enter item price: "))
-                    item_quantity: int = int(input("Enter item quantity: "))
-                    cart.add_item(ItemToPurchase(item_name, item_price, item_quantity))
+                    print()
+                    print("ADD ITEM TO CART".center(WIDTH))
+                    print("Enter the item name:".center(WIDTH))
+                    item_name: str = input(f"{'':^{WIDTH / 3}}")
+                    print("Enter the item description:".center(WIDTH))
+                    item_description: str = input(f"{'':^{WIDTH / 3}}")
+                    print("Enter item price:".center(WIDTH))
+                    item_price: float = float(input(f"{'':^{WIDTH / 3}}"))
+                    print("Enter item quantity:".center(WIDTH))
+                    item_quantity: int = int(input(f"{'':^{WIDTH / 3}}"))
+                    cart.add_item(ItemToPurchase(item_name, item_description, item_price, item_quantity))
                 case "r":
-                    item_name = input("Enter the item name to remove: ")
+                    print()
+                    print("REMOVE ITEM FROM CART".center(WIDTH))
+                    print("Enter name of item to remove:".center(WIDTH))
+                    item_name = input(f"{'':^{WIDTH / 3}}")
                     cart.remove_item(item_name)
                 case "c":
+                    print()
+                    print("MODIFY ITEM IN CART".center(WIDTH))
                     item_name = input("Enter the item name to modify: ")
                     cart.modify_item(item_name)
                 case "i":
                     print()
-                    print(f"{'OUTPUT ITEMS\' DESCRIPTIONS':^{WIDTH}}")
+                    print(f"{'\nOUTPUT ITEMS\' DESCRIPTIONS':^{WIDTH}}")
                     cart.print_descriptions()
                 case "o":
                     print()
@@ -180,30 +199,6 @@ def main() -> None:
                     print(f"{'Invalid input. Please choose a valid option.':^{WIDTH}}")
     
     print_menu(cart)
-
-    print("\n")
-
-    # Hard-coded for assignment as proof of concept without user input:
-    
-    # Create items with hardcoded descriptions as placeholders
-    item1 = ItemToPurchase("Nike Romaleos", 189.00, 2)
-    item1.item['description'] = "Volt color, Weightlifting shoes"  # Placeholder description for now
-
-    item2 = ItemToPurchase("Chocolate Chips", 3.00, 5)
-    item2.item['description'] = "Semi-sweet"  # Placeholder description for now
-
-    item3 = ItemToPurchase("Powerbeats 2 Headphones", 128.00, 1)
-    item3.item['description'] = "Bluetooth headphones"  # Placeholder description for now
-
-    # Add items to shopping cart
-    shopping_cart = ShoppingCart(customer_name = "John Doe", current_date = "February 1, 2020")
-    shopping_cart.add_item(item1)
-    shopping_cart.add_item(item2)
-    shopping_cart.add_item(item3)
-
-    # Print item descriptions as proof of concept
-    shopping_cart.print_descriptions()
-
 
 if __name__ == "__main__":
     main()
