@@ -114,7 +114,7 @@ class ShoppingCart:
         """
         Determines and returns the total cost of items in cart. Has no parameters.
         """
-        total: int = 0
+        total: float = 0
         for item in self.cart_items:
             total += item.item["price"] * item.item["quantity"]
 
@@ -150,14 +150,38 @@ class ShoppingCart:
             print(f"{'SHOPPING CART IS EMPTY'}".center(WIDTH))
 
 
+def get_float_input(prompt: str) -> float:
+    """Helper function to get a valid float input from the user."""
+    while True:
+        print(prompt.center(WIDTH))
+        user_input = input(" " * (WIDTH // 2))
+        if user_input == "":
+            return 0.0
+        try:
+            return float(user_input)
+        except ValueError:
+            print("Invalid input. Please enter a valid number or press enter to skip.".center(WIDTH))
+
+def get_int_input(prompt: str) -> int:
+    """Helper function to get a valid integer input from the user."""
+    while True:
+        print(prompt.center(WIDTH))
+        user_input = input(" " * (WIDTH // 2))
+        if user_input == "":
+            return 0
+        try:
+            return int(user_input)
+        except ValueError:
+            print("Invalid input. Please enter a valid integer or press enter to skip.".center(WIDTH))
+
 def main() -> None:
     """
     Main function to...
     """
     print(f"{'Enter customer\'s name:':^{WIDTH}}")
-    customer_name: str = input(f"{'':^{WIDTH / 3}}")
+    customer_name: str = input(f"{'':^{WIDTH // 3}}")
     print(f"{'Enter today\'s date:':^{WIDTH}}")
-    current_date: str = input(f"{'':^{WIDTH / 3}}")
+    current_date: str = input(f"{'':^{WIDTH // 3}}")
     print(f"{f'Customer\'s name: {customer_name}':^{WIDTH}}")
     print(f"{f'Today\'s date: {current_date}':^{WIDTH}}")
     cart: ShoppingCart = ShoppingCart(customer_name, current_date)
@@ -173,7 +197,7 @@ def main() -> None:
             print(f"{'o - Output shopping cart':^{WIDTH}}")
             print(f"{'q - Quit':^{WIDTH}}")
             print(f"{'Choose an option: ':^{WIDTH}}")
-            user_input = input(f"{'':^{WIDTH / 2}}")
+            user_input = input(" " * (WIDTH // 2))
             match user_input:
                 case "q":
                     print(f"{'Thanks for shopping with us. Goodbye!':^{WIDTH}}")
@@ -183,27 +207,24 @@ def main() -> None:
                     print()
                     print("ADD ITEM TO CART".center(WIDTH))
                     print("Enter the item name:".center(WIDTH))
-                    item_name: str = input(f"{'':^{WIDTH / 3}}")
+                    item_name: str = input(f"{'':^{WIDTH // 3}}")
                     print("Enter the item description:".center(WIDTH))
-                    item_description: str = input(f"{'':^{WIDTH / 3}}")
-                    print("Enter item price:".center(WIDTH))
-                    item_price: float = float(input(f"{'':^{WIDTH / 3}}"))
-                    print("Enter item quantity:".center(WIDTH))
-                    item_quantity: int = int(input(f"{'':^{WIDTH / 3}}"))
+                    item_description: str = input(" " * (WIDTH // 3))
+                    item_price: float = get_float_input("Enter item price:")
+                    item_quantity: int = get_int_input("Enter item quantity:")
                     cart.add_item(ItemToPurchase(item_name, item_description, item_price, item_quantity))
                 case "r":
                     print()
                     print("REMOVE ITEM FROM CART".center(WIDTH))
                     print("Enter name of item to remove:".center(WIDTH))
-                    item_name: str = input(f"{'':^{WIDTH / 3}}")
+                    item_name: str = input(" " * (WIDTH // 2))
                     cart.remove_item(item_name)
                 case "c":
                     print()
                     print("CHANGE ITEM QUANTITY".center(WIDTH))
                     print("Enter the item name to modify:".center(WIDTH))
-                    new_name: str = input(f"{'':^{WIDTH / 2}}")
-                    print("Enter the new quantity".center(WIDTH))
-                    new_quantity: int = int(input(f"{'':^{WIDTH / 3}}"))
+                    new_name: str = input(" " * (WIDTH // 3))
+                    new_quantity: int = get_int_input("Enter the new quantity:")
                     new_item = ItemToPurchase(item_name = new_name, item_quantity = new_quantity)
                     cart.modify_item(new_item)
                 case "i":
