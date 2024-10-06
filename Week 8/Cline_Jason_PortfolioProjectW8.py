@@ -78,7 +78,7 @@ class ShoppingCart:
         else:
             print("Item not found in cart. Nothing removed.".center(WIDTH))
 
-    def modify_item(item: ItemToPurchase) -> None:
+    def modify_item(self, item: ItemToPurchase) -> None:
         """
         Modifies an item's description, price, and/or quantity. Has parameter ItemToPurchase. Does not return anything.
         If item can be found (by name) in cart, check if parameter has default values for description, price, and quantity. If not, modify item in cart.
@@ -180,13 +180,25 @@ def main() -> None:
                     print()
                     print("REMOVE ITEM FROM CART".center(WIDTH))
                     print("Enter name of item to remove:".center(WIDTH))
-                    item_name = input(f"{'':^{WIDTH / 3}}")
+                    item_name: str = input(f"{'':^{WIDTH / 3}}")
                     cart.remove_item(item_name)
                 case "c":
                     print()
-                    print("MODIFY ITEM IN CART".center(WIDTH))
-                    item_name = input("Enter the item name to modify: ")
-                    cart.modify_item(item_name)
+                    print("CHANGE ITEM QUANTITY".center(WIDTH))
+                    print("Enter the item name to modify:".center(WIDTH))
+                    item_name: str = input(f"{'':^{WIDTH / 3}}")
+                    counter = 0
+                    target_item = None
+                    found = False
+                    while counter < len(cart.cart_items):
+                        if cart.cart_items[counter].item["name"].lower() == item_name.lower():
+                            target_item = cart.cart_items[counter]
+                            found = True
+                        counter += 1
+                    if found:
+                        cart.modify_item(target_item)
+                    else:
+                        print("Item not found in cart. Nothing modified.".center(WIDTH))
                 case "i":
                     print()
                     print(f"{'OUTPUT ITEMS\' DESCRIPTIONS':^{WIDTH}}")
