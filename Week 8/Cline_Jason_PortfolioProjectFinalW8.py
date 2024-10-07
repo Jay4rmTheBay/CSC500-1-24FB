@@ -18,7 +18,7 @@ class ItemToPurchase:
         self,
         item_name: str = "none",
         item_description: str = "none",
-        item_price: float = 0,
+        item_price: float = 0.0, # Why wasnt this initalized as a float?
         item_quantity: int = 0,
     ) -> None:
         """
@@ -91,7 +91,7 @@ class ShoppingCart:
                 if item.item['quantity'] != 0:
                     cart_item.item['quantity'] = item.item['quantity']
                     print(f"{item.item['name']} found in cart. Quantity modified.".center(WIDTH))
-                if item.item['price'] != 0:
+                if item.item['price'] != 0.0:
                     cart_item.item['price'] = item.item['price']
                     print(f"{item.item['name']} found in cart. Price modified.".center(WIDTH))
                 if item.item['description'] != "none":
@@ -128,7 +128,7 @@ class ShoppingCart:
 
         if self.cart_items:
             print(f"{self.customer_name}'s Shopping Cart - {self.current_date}".center(WIDTH))
-            print(f"Number of items: {len(self.cart_items)}".center(WIDTH))
+            print(f"Number of items: {self.get_num_items_in_cart()}".center(WIDTH))
             for item in self.cart_items:
                 item.print_item_cost()
             print(f"Total: ${self.get_cost_of_cart():.2f}".center(WIDTH))
@@ -193,6 +193,8 @@ def main() -> None:
             print(f"{'a - Add item to cart':^{WIDTH}}")
             print(f"{'r - Remove item from cart':^{WIDTH}}")
             print(f"{'c - Change item quantity':^{WIDTH}}")
+            print(f"{'p - Change item price':^{WIDTH}}")
+            print(f"{'d - Change item description':^{WIDTH}}")
             print(f"{'i - Output items\' descriptions':^{WIDTH}}")
             print(f"{'o - Output shopping cart':^{WIDTH}}")
             print(f"{'q - Quit':^{WIDTH}}")
@@ -217,7 +219,7 @@ def main() -> None:
                     print()
                     print("REMOVE ITEM FROM CART".center(WIDTH))
                     print("Enter name of item to remove:".center(WIDTH))
-                    item_name: str = input(" " * (WIDTH // 2))
+                    item_name: str = input(" " * (WIDTH // 3))
                     cart.remove_item(item_name)
                 case "c":
                     print()
@@ -226,6 +228,23 @@ def main() -> None:
                     new_name: str = input(" " * (WIDTH // 3))
                     new_quantity: int = get_int_input("Enter the new quantity:")
                     new_item = ItemToPurchase(item_name = new_name, item_quantity = new_quantity)
+                    cart.modify_item(new_item)
+                case "p":
+                    print()
+                    print("CHANGE ITEM PRICE".center(WIDTH))
+                    print("Enter the item name to modify:".center(WIDTH))
+                    new_name: str = input(" " * (WIDTH // 3))
+                    new_price: float = get_float_input("Enter the new price:")
+                    new_item = ItemToPurchase(item_name = new_name, item_price = new_price)
+                    cart.modify_item(new_item)
+                case "d":
+                    print()
+                    print("CHANGE ITEM DESCRIPTION".center(WIDTH))
+                    print("Enter the item name to modify:".center(WIDTH))
+                    new_name: str = input(" " * (WIDTH // 3))
+                    print("Enter the new description:".center(WIDTH))
+                    new_description: str = input(" " * (WIDTH // 3))
+                    new_item = ItemToPurchase(item_name = new_name, item_description = new_description)
                     cart.modify_item(new_item)
                 case "i":
                     print()
