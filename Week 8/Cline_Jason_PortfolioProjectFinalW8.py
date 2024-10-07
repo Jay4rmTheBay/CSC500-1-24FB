@@ -18,7 +18,7 @@ class ItemToPurchase:
         self,
         item_name: str = "none",
         item_description: str = "none",
-        item_price: float = 0.0, # Why wasnt this initalized as a float?
+        item_price: float = 0.0,
         item_quantity: int = 0,
     ) -> None:
         """
@@ -28,6 +28,8 @@ class ItemToPurchase:
             item_name (str): The name of the item. Defaults to "none".
             item_price (float): The price of the item. Defaults to 0.
             item_quantity (int): The quantity of the item. Defaults to 0.
+        Returns:
+            None: This method does not return anything.
         """
         self.item = {
             "name": item_name,
@@ -52,6 +54,14 @@ class ShoppingCart:
         customer_name: str = "none",
         current_date: str = "January 1, 2020",
     ) -> None:
+        """
+        Initialize a new instance of the class.
+        Args:
+            customer_name (str): The name of the customer. Defaults to "none".
+            current_date (str): The current date. Defaults to "January 1, 2020".
+        Returns:
+            None: This method does not return anything.
+        """
         self.customer_name: str = customer_name
         self.current_date: str = current_date
         self.cart_items: list = []
@@ -62,13 +72,19 @@ class ShoppingCart:
 
         Args:
             item (ItemToPurchase): The item to be added to the cart_items list.
+        Returns:
+            None: This method does not return anything.
         """
         self.cart_items.append(item)
 
     def remove_item(self, item_name: str) -> None:
         """
-        Removes item from cart_items list. Has a string (an item's name) parameter. Does not return anything.
-        If item name cannot be found, output this message: Item not found in cart. Nothing removed.
+        Removes item from cart_items list.
+
+        Args:
+            item_name (str): The name of the item to be removed.
+        Returns:
+            None: This method does not return anything.
         """
         for item in self.cart_items:
             if item.item["name"].lower() == item_name.lower():
@@ -80,9 +96,12 @@ class ShoppingCart:
 
     def modify_item(self, item: ItemToPurchase) -> None:
         """
-        Modifies an item's description, price, and/or quantity. Has parameter ItemToPurchase. Does not return anything.
-        If item can be found (by name) in cart, check if parameter has default values for description, price, and quantity. If not, modify item in cart.
-        If item cannot be found (by name) in cart, output this message: Item not found in cart. Nothing modified.
+        Modifies an item's description, price, and/or quantity.
+
+        Args:
+            item (ItemToPurchase): The item to be modified.
+        Returns:
+            None: This method does not return anything.
         """
         found = False
         for cart_item in self.cart_items:
@@ -103,7 +122,12 @@ class ShoppingCart:
 
     def get_num_items_in_cart(self) -> int:
         """
-        Returns quantity of all items in cart. Has no parameters.
+        Returns the quantity of all items in the cart.
+
+        Args:
+            This method does not require any parameters.
+        Returns:
+            int: The total quantity of all items in the cart.
         """
         total_quantity: int = 0
         for item in self.cart_items:
@@ -112,7 +136,11 @@ class ShoppingCart:
 
     def get_cost_of_cart(self) -> float:
         """
-        Determines and returns the total cost of items in cart. Has no parameters.
+        Determines and returns the total cost of items in the cart.
+        Args:
+            This method does not require any parameters.
+        Returns:
+            float: The total cost of items in the cart.
         """
         total: float = 0
         for item in self.cart_items:
@@ -123,7 +151,10 @@ class ShoppingCart:
     def print_total(self) -> None:
         """
         Outputs total of objects in cart.
-        If cart is empty, output this message: SHOPPING CART IS EMPTY
+        Args:
+            This method does not require any parameters.
+        Returns:
+            None: This method does not return anything.
         """
 
         if self.cart_items:
@@ -137,8 +168,14 @@ class ShoppingCart:
 
     def print_descriptions(self) -> None:
         """
-        Outputs each item's description.
+        Outputs total of objects in cart.
+
+        Args:
+            This method does not require any parameters.
+        Returns:
+            None: This method does not return anything.
         """
+
         if self.cart_items:
             print(
                 f"{self.customer_name}'s Shopping Cart - {self.current_date}".center(WIDTH)
@@ -151,7 +188,14 @@ class ShoppingCart:
 
 
 def get_float_input(prompt: str) -> float:
-    """Helper function to get a valid float input from the user."""
+    """
+    Helper function to get a valid float input from the user.
+
+    Args:
+        prompt (str): The prompt message to display to the user.
+    Returns:
+        float: The valid float input from the user.
+    """
     while True:
         print(prompt.center(WIDTH))
         user_input = input(" " * (WIDTH // 2))
@@ -163,7 +207,14 @@ def get_float_input(prompt: str) -> float:
             print("Invalid input. Please enter a valid number or press enter to skip.".center(WIDTH))
 
 def get_int_input(prompt: str) -> int:
-    """Helper function to get a valid integer input from the user."""
+    """
+    Helper function to get a valid integer input from the user.
+
+    Args:
+        prompt (str): The prompt message to display to the user.
+    Returns:
+        int: The valid integer input from the user.
+    """
     while True:
         print(prompt.center(WIDTH))
         user_input = input(" " * (WIDTH // 2))
@@ -176,7 +227,14 @@ def get_int_input(prompt: str) -> int:
 
 def main() -> None:
     """
-    Main function to...
+    Main function that serves as the entry point of the program.
+    It prompts the user to enter customer's name and today's date.
+    Then, it creates a ShoppingCart object using the provided information.
+    It displays a menu of options for the user to interact with the shopping cart.
+    The user can add items to the cart, remove items from the cart, change item quantity, 
+    change item price, change item description, output items' descriptions, output the shopping cart, 
+    or quit the program.
+    The function continues to display the menu until the user chooses to quit.
     """
     print(f"{'Enter customer\'s name:':^{WIDTH}}")
     customer_name: str = input(f"{'':^{WIDTH // 3}}")
@@ -199,7 +257,7 @@ def main() -> None:
             print(f"{'o - Output shopping cart':^{WIDTH}}")
             print(f"{'q - Quit':^{WIDTH}}")
             print(f"{'Choose an option: ':^{WIDTH}}")
-            user_input = input(" " * (WIDTH // 2))
+            user_input = input(" " * (WIDTH // 2)).lower()
             match user_input:
                 case "q":
                     print(f"{'Thanks for shopping with us. Goodbye!':^{WIDTH}}")
@@ -225,26 +283,26 @@ def main() -> None:
                     print()
                     print("CHANGE ITEM QUANTITY".center(WIDTH))
                     print("Enter the item name to modify:".center(WIDTH))
-                    new_name: str = input(" " * (WIDTH // 3))
+                    item_name: str = input(" " * (WIDTH // 3))
                     new_quantity: int = get_int_input("Enter the new quantity:")
-                    new_item = ItemToPurchase(item_name = new_name, item_quantity = new_quantity)
+                    new_item = ItemToPurchase(item_name = item_name, item_quantity = new_quantity)
                     cart.modify_item(new_item)
                 case "p":
                     print()
                     print("CHANGE ITEM PRICE".center(WIDTH))
                     print("Enter the item name to modify:".center(WIDTH))
-                    new_name: str = input(" " * (WIDTH // 3))
+                    item_name: str = input(" " * (WIDTH // 3))
                     new_price: float = get_float_input("Enter the new price:")
-                    new_item = ItemToPurchase(item_name = new_name, item_price = new_price)
+                    new_item = ItemToPurchase(item_name = item_name, item_price = new_price)
                     cart.modify_item(new_item)
                 case "d":
                     print()
                     print("CHANGE ITEM DESCRIPTION".center(WIDTH))
                     print("Enter the item name to modify:".center(WIDTH))
-                    new_name: str = input(" " * (WIDTH // 3))
+                    item_name: str = input(" " * (WIDTH // 3))
                     print("Enter the new description:".center(WIDTH))
                     new_description: str = input(" " * (WIDTH // 3))
-                    new_item = ItemToPurchase(item_name = new_name, item_description = new_description)
+                    new_item = ItemToPurchase(item_name = item_name, item_description = new_description)
                     cart.modify_item(new_item)
                 case "i":
                     print()
