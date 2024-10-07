@@ -142,7 +142,7 @@ class ShoppingCart:
         Returns:
             float: The total cost of items in the cart.
         """
-        total: float = 0
+        total: float = 0.0
         for item in self.cart_items:
             total += item.item["price"] * item.item["quantity"]
 
