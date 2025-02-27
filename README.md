@@ -32,7 +32,7 @@ This repository is intended to track and manage the weekly assignments and proje
   - `Cline_Jason_SolutionW3.pdf` -  PDF of pseudocode
     
 ### Week 4: Loops
-- **Assignment:** Shopping Cart
+- **Assignment:** Shopping Cart Milestone
 - **Files:**
   - `Cline_Jason_PortfolioMilestoneW4.py` - Python script for the week's assignment
   - `Cline_Jason_PortfolioMilestoneW4UPDATE.py` - Modified python script for the week's assignment
@@ -46,19 +46,19 @@ This repository is intended to track and manage the weekly assignments and proje
   - `Cline_Jason_SolutionW5.py` - Python script for the week's assignment
         
 ### Week 6: Lists and Dictionaries
-- **Assignment:** N/A
+- **Assignment:** Shopping Cart Milestone
 - **Files:**
   - `Cline_Jason_PortfolioMilestoneW6.docx` -  DOC of pseudocode
   - `Cline_Jason_SolutionW6.py` - Python script for the week's assignment
     
 ### Week 7: User-Defined Functions and Exceptions
-- **Assignment:** N/A
+- **Assignment:** Course Information Retriever
 - **Files:**
   - `Cline_Jason_BetterSolutionW7.py` -  Modified Python script for the week's assignment
   - `Cline_Jason_SolutionW7.py` - Python script for the week's assignment
         
 ### Week 8: Classes and String Manipulation
-- **Assignment:** Shopping Cart
+- **Assignment:** Shopping Cart Final
 - **Files:**
   - `Cline_Jason_PortfolioProjectFinalW8.py` - Modified Python script for final project
   - `Cline_Jason_PortfolioProjectW8.py` -  Python script for final project
