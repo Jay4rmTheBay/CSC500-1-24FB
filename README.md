@@ -20,52 +20,52 @@ This repository is intended to track and manage the weekly assignments and proje
 ### Week 1: Introduction to Programming Concepts
 - **Assignment:** Calculator
 - **Files:**
-  - `Cline_Jason_SolutionW1.py` - Python script for the week's assignment
+  - `Cline_Jason_SolutionW1(OOP).py` - Python script for the week's assignment
   - `Cline_Jason_SolutionW1.pdf` - PDF of pseudocode
   - `Cline_Jason_SolutionW1.png` - Image of program execution
+  - 'Cline_Jason_SolutionW1.py' - Modified Python script for the week's assignment
 
 ### Week 2: Variables and Expressions
 - **Assignment:** N/A
-- **Files:**
-  - `Cline_Jason_SolutionW2.py` - Python script for the week's assignment
-  - `Cline_Jason_SolutionW2.pdf` -  PDF of pseudocode
-  - `Cline_Jason_SolutionW2.png` - Image of program execution
+
 ### Week 3: Data Types and Arrays
-- **Assignment:** N/A
+- **Assignment:** Restaurant Bill Alarm Clock
 - **Files:**
-  - `Cline_Jason_SolutionW3.py` - Python script for the week's assignment
+  - `Cline_Jason_RestaurantBill_AlarmClockW3.py` - Python script for the week's assignment
   - `Cline_Jason_SolutionW3.pdf` -  PDF of pseudocode
-  - `Cline_Jason_SolutionW3.png` - Image of program execution
+    
 ### Week 4: Loops
-- **Assignment:** N/A
+- **Assignment:** Shopping Cart
 - **Files:**
-  - `Cline_Jason_SolutionW4.py` - Python script for the week's assignment
+  - `Cline_Jason_PortfolioMilestoneW4.py` - Python script for the week's assignment
+  - 'Cline_Jason_PortfolioMilestoneW4UPDATE.py' - Modified python script for the week's assignment
+  - `Cline_Jason_SolutionW4.docx` - DOC of modified pseudocode
   - `Cline_Jason_SolutionW4.pdf` -  PDF of pseudocode
-  - `Cline_Jason_SolutionW4.png` - Image of program execution
+        
  ### Week 5: Branching
 - **Assignment:** N/A
 - **Files:**
+  - `Cline_Jason_SolutionW5.docx` -  DOC of pseudocode
   - `Cline_Jason_SolutionW5.py` - Python script for the week's assignment
-  - `Cline_Jason_SolutionW5.pdf` -  PDF of pseudocode
-  - `Cline_Jason_SolutionW5.png` - Image of program execution
+        
 ### Week 6: Lists and Dictionaries
 - **Assignment:** N/A
 - **Files:**
+  - `Cline_Jason_PortfolioMilestoneW6.docx` -  DOC of pseudocode
   - `Cline_Jason_SolutionW6.py` - Python script for the week's assignment
-  - `Cline_Jason_SolutionW6.pdf` -  PDF of pseudocode
-  - `Cline_Jason_SolutionW6.png` - Image of program execution
+    
 ### Week 7: User-Defined Functions and Exceptions
 - **Assignment:** N/A
 - **Files:**
+  - `Cline_Jason_BetterSolutionW7.py` -  Modified Python script for the week's assignment
   - `Cline_Jason_SolutionW7.py` - Python script for the week's assignment
-  - `Cline_Jason_SolutionW7.pdf` -  PDF of pseudocode
-  - `Cline_Jason_SolutionW7.png` - Image of program execution
+        
 ### Week 8: Classes and String Manipulation
-- **Assignment:** N/A
+- **Assignment:** Shopping Cart
 - **Files:**
-  - `Cline_Jason_SolutionW8.py` - Python script for the week's assignment
-  - `Cline_Jason_SolutionW8.pdf` -  PDF of pseudocode
-  - `Cline_Jason_SolutionW8.png` - Image of program execution
+  - `Cline_Jason_PortfolioProjectFinalW8.py` - Modified Python script for final project
+  - `Cline_Jason_PortfolioProjectW8.py` -  Python script for final project
+  - `test.py` - Unit tests for Python final project
  
 ## Folder Structure
 
@@ -73,42 +73,38 @@ The repository is organized as follows:
 
 ```
 ├── week1
-│   ├── Cline_Jason_SolutionW1.py
-│   └── Cline_Jason_SolutionW1.pdf
-|   └── Cline_Jason_SolutionW1.png
+│   ├── Cline_Jason_SolutionW1(OOP).py
+│   ├── Cline_Jason_SolutionW1.pdf
+│   ├── Cline_Jason_SolutionW1.png
+│   └── Cline_Jason_SolutionW1.py
 ├── week2
-│   ├── Cline_Jason_SolutionW2.py
-│   └── Cline_Jason_SolutionW2.pdf
-|   └── Cline_Jason_SolutionW2.png
+│   └── (No files)
 ├── week3
-│   ├── Cline_Jason_SolutionW3.py
+│   ├── Cline_Jason_RestaurantBill_AlarmClockW3.py
 │   └── Cline_Jason_SolutionW3.pdf
-|   └── Cline_Jason_SolutionW3.png
 ├── week4
-│   ├── Cline_Jason_SolutionW4.py
+│   ├── Cline_Jason_PortfolioMilestoneW4.py
+│   ├── Cline_Jason_PortfolioMilestoneW4UPDATE.py
+│   ├── Cline_Jason_SolutionW4.docx
 │   └── Cline_Jason_SolutionW4.pdf
-|   └── Cline_Jason_SolutionW4.png
 ├── week5
-│   ├── Cline_Jason_SolutionW5.py
-│   └── Cline_Jason_SolutionW5.pdf
-|   └── Cline_Jason_SolutionW5.png
+│   ├── Cline_Jason_SolutionW5.docx
+│   └── Cline_Jason_SolutionW5.py
 ├── week6
-│   ├── Cline_Jason_SolutionW6.py
-│   └── Cline_Jason_SolutionW6.pdf
-|   └── Cline_Jason_SolutionW6.png
+│   ├── Cline_Jason_PortfolioMilestoneW6.docx
+│   └── Cline_Jason_SolutionW6.py
 ├── week7
-│   ├── Cline_Jason_SolutionW7.py
-│   └── Cline_Jason_SolutionW7.pdf
-|   └── Cline_Jason_SolutionW7.png
+│   ├── Cline_Jason_BetterSolutionW7.py
+│   └── Cline_Jason_SolutionW7.py
 ├── week8
-│   ├── Cline_Jason_SolutionW8.py
-│   └── Cline_Jason_SolutionW8.pdf
-|   └── Cline_Jason_SolutionW8.png
+│   ├── Cline_Jason_PortfolioProjectFinalW8.py
+│   ├── Cline_Jason_PortfolioProjectW8.py
+│   └── test.py
 └── README.md
 ```
 
 - **`week1`**: Contains files for the first week of assignments.
-- **`week2`**: Contains files for the second week of assignments.
+- **`week2`**: Does not contain any files.
 - **`week3`**: Contains files for the third week of assignments.
 - **`week4`**: Contains files for the fourth week of assignments.
 - **`week5`**: Contains files for the fifth week of assignments.
