@@ -25,9 +25,6 @@ This repository is intended to track and manage the weekly assignments and proje
   - `Cline_Jason_SolutionW1.png` - Image of program execution
   - `Cline_Jason_SolutionW1.py` - Modified Python script for the week's assignment
 
-### Week 2: Variables and Expressions
-- **Assignment:** N/A
-
 ### Week 3: Data Types and Arrays
 - **Assignment:** Restaurant Bill Alarm Clock
 - **Files:**
@@ -77,8 +74,6 @@ The repository is organized as follows:
 │   ├── Cline_Jason_SolutionW1.pdf
 │   ├── Cline_Jason_SolutionW1.png
 │   └── Cline_Jason_SolutionW1.py
-├── week2
-│   └── (No files)
 ├── week3
 │   ├── Cline_Jason_RestaurantBill_AlarmClockW3.py
 │   └── Cline_Jason_SolutionW3.pdf
@@ -104,7 +99,6 @@ The repository is organized as follows:
 ```
 
 - **`week1`**: Contains files for the first week of assignments.
-- **`week2`**: Does not contain any files.
 - **`week3`**: Contains files for the third week of assignments.
 - **`week4`**: Contains files for the fourth week of assignments.
 - **`week5`**: Contains files for the fifth week of assignments.
