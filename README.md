@@ -23,7 +23,7 @@ This repository is intended to track and manage the weekly assignments and proje
   - `Cline_Jason_SolutionW1(OOP).py` - Python script for the week's assignment
   - `Cline_Jason_SolutionW1.pdf` - PDF of pseudocode
   - `Cline_Jason_SolutionW1.png` - Image of program execution
-  - 'Cline_Jason_SolutionW1.py' - Modified Python script for the week's assignment
+  - `Cline_Jason_SolutionW1.py` - Modified Python script for the week's assignment
 
 ### Week 2: Variables and Expressions
 - **Assignment:** N/A
@@ -38,7 +38,7 @@ This repository is intended to track and manage the weekly assignments and proje
 - **Assignment:** Shopping Cart
 - **Files:**
   - `Cline_Jason_PortfolioMilestoneW4.py` - Python script for the week's assignment
-  - 'Cline_Jason_PortfolioMilestoneW4UPDATE.py' - Modified python script for the week's assignment
+  - `Cline_Jason_PortfolioMilestoneW4UPDATE.py` - Modified python script for the week's assignment
   - `Cline_Jason_SolutionW4.docx` - DOC of modified pseudocode
   - `Cline_Jason_SolutionW4.pdf` -  PDF of pseudocode
         
